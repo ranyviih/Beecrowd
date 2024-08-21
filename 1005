@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class Main {
+
+    final static Scanner LER = new Scanner(System.in);
+    public static void main(String[] args) {
+
+        double A = 0;
+        double B = 0; 
+        
+
+        A = lerA(A);
+        B = lerB(B);
+        
+        
+        double media=0;
+       
+        media = calcMedia(A, B);
+
+        imprimirResposta(media);
+        
+    }
+    public static double lerA(double A){
+        A = LER.nextDouble();
+        return A;
+    }
+    public static double lerB(double B){
+        B = LER.nextDouble();
+        return B;
+    }
+    public static double calcMedia(double A, double B){
+       double media = ((3.5 * A) + (7.5 * B))/11;
+        return media;
+    }
+    public static void imprimirResposta(double media) {
+        System.out.printf("MEDIA = %.5f\n",media);
+
+    }
+}

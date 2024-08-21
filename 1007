@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class Main {
+
+    final static Scanner LER = new Scanner(System.in);
+    public static void main(String[] args) {
+
+        int A = 0;
+        int B = 0;
+        int C = 0;
+        int D = 0; 
+        int diferenca = 0;
+        
+
+        A = lerA(A);
+        B = lerB(B);
+        C = lerC(C);
+        D = lerD(D);
+        
+ 
+       diferenca = calcDif(A, B, C, D, diferenca);
+
+        imprimirResposta(diferenca);
+        
+    }
+    public static int lerA(int A){
+        A = LER.nextInt();
+        return A;
+    }
+    public static int lerB(int B){
+        B = LER.nextInt();
+        return B;
+    }
+    public static int lerC(int C){
+        C = LER.nextInt();
+        return C;
+    }
+    public static int lerD(int D){
+        D = LER.nextInt();
+        return D;
+    }
+    public static int calcDif(int A, int B, int C, int D, int diferenca){
+        diferenca = (A * B) - (C * D);
+
+        return diferenca;
+
+    }
+    public static void imprimirResposta(int diferenca) {
+        System.out.println("DIFERENCA = " + diferenca);
+
+    }
+}

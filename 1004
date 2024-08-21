@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+
+    final static Scanner LER = new Scanner(System.in);
+ 
+    public static void main(String[] args){
+
+        int a = 0;
+        int b = 0;
+        int prod = 0;
+
+        a = lerA(a);
+        b = lerB(b);
+
+        prod = calcProd(a, b, prod);
+        imprimirResposta(prod);
+    }
+
+    public static int lerA(int a){
+        a = LER.nextInt();
+        return a;
+    }
+
+    public static int lerB(int b){
+        b = LER.nextInt();
+        return b;
+    }
+
+    public static int calcProd(int a, int b, int prod){
+        prod = a * b;
+        return prod;
+    }
+
+    public static void imprimirResposta(int prod) {
+        System.out.println("PROD = " + prod);
+    }
+}
+

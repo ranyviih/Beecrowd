@@ -1,0 +1,54 @@
+import java.util.Scanner;
+public class Main{
+    final static Scanner LER = new Scanner(System.in);
+ 
+    public static void main(String[] args){
+
+        String nomeVendedor = "";
+        Double salarioFixo = 0d;
+        Double totalVendas = 0d;
+        Double valorFinal = 0d;
+        Double receber = 0d;
+
+        nomeVendedor = lerNomeVendedor(nomeVendedor);
+        salarioFixo = lerSalarioFixo(salarioFixo);
+        totalVendas = lerTotalVendas(totalVendas);
+
+        valorFinal = lerComissao(totalVendas);
+        receber = lerReceber(valorFinal,salarioFixo);
+        imprimirResposta(receber);
+
+
+    }
+
+    public static String lerNomeVendedor(String nomeVendedor) {
+        nomeVendedor = LER.next();
+        return nomeVendedor;
+    }
+
+    public static Double lerSalarioFixo(Double salarioFixo) {
+        salarioFixo = LER.nextDouble();
+        return salarioFixo;
+    }
+
+    public static Double lerTotalVendas(Double totalVendas) {
+        totalVendas = LER.nextDouble();
+        return totalVendas;
+    }
+
+    public static Double lerComissao(Double totalVendas) {
+        Double valorFinal = 0d;
+        valorFinal = totalVendas * 0.15d;
+        return valorFinal;
+    }
+
+    public static Double lerReceber(Double valorFinal, Double salarioFixo) {
+        Double receber = 0d;
+        receber = valorFinal + salarioFixo;
+        return receber;
+    }
+    public static void imprimirResposta(Double receber) {
+        System.out.printf("TOTAL = R$ %.2f\n", receber);
+        
+    }
+}

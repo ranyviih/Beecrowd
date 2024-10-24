@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+    final static Scanner ler = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int num = ler.nextInt();
+        int horarsTrabalhadas = ler.nextInt();
+        double valorPorHora = ler.nextDouble();
+
+        double salario = horarsTrabalhadas * valorPorHora;
+
+        System.out.println("NUMBER = " + num);
+        System.out.printf("SALARY = U$ %.2f", salario);
+
+    }
+}

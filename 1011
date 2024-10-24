@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+    final static Scanner ler = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        double raio = ler.nextFloat();
+
+        double resultado = 0;
+        resultado = raio * raio * raio;
+
+        double volume = 0;
+        volume = (4/3.0) * 3.14159 * resultado;
+
+        System.out.printf("VOLUME = %.3f", volume);
+
+    }
+}

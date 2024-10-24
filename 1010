@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+    final static Scanner ler = new Scanner(System.in);
+    public static void main(String[] args) {
+        int cod01 = ler.nextInt();
+        int num01 = ler.nextInt();
+        double valor01 = ler.nextDouble();
+        
+        int cod02 = ler.nextInt();
+        int num02 = ler.nextInt();
+        double valor02 = ler.nextDouble();
+        
+        double item01 = num01 * valor01;
+        double item02 = num02 * valor02;
+        double resultado = item01 + item02;
+        
+        System.out.printf("VALOR A PAGAR: R$ %.2f",resultado);
+    }
+}

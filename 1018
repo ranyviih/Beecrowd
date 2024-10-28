@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main {
+    final static Scanner ler = new Scanner(System.in);
+
+    public static void main(String[] args) {
+       int num = ler.nextInt();
+       int imprimirNum = num;
+       
+       int nota100 = num / 100;
+       num -= nota100 * 100;
+
+       int nota50 = num / 50;
+       num -= nota50 * 50; 
+
+       int nota20 = num / 20;
+       num -= nota20 * 20;
+
+       int nota10 = num / 10;
+       num -= nota10 * 10;
+
+       int nota5 = num / 5;
+       num -= nota5 * 5;
+       
+       int nota2 = num / 2;
+       num -= nota2 * 2;
+
+       int nota1 = num;
+       
+       System.out.println(imprimirNum);
+       System.out.println(nota100 + " nota(s) de R$ 100,00");
+       System.out.println(nota50 + " nota(s) de R$ 50,00");
+       System.out.println(nota20 + " nota(s) de R$ 20,00");
+       System.out.println(nota10 + " nota(s) de R$ 10,00");
+       System.out.println(nota5 + " nota(s) de R$ 5,00");
+       System.out.println(nota2 + " nota(s) de R$ 2,00");
+       System.out.println(nota1 + " nota(s) de R$ 1,00");
+    }
+       
+}

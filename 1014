@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+    final static Scanner ler = new Scanner(System.in);
+
+    public static void main(String[] args) {
+       int km = ler.nextInt();
+       double combustivelGasto = ler.nextDouble();
+       
+
+       double total = km / combustivelGasto;
+
+       System.out.printf("%.3f km/l", total);
+
+    }
+       
+}

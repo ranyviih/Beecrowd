@@ -14,7 +14,7 @@ public class Main {
 
         int seg = tempo;
 
-        System.out.println(hora + " : " + min + " : " + seg);
+        System.out.println(hora + ":" + min + ":" + seg);
 
     }
 

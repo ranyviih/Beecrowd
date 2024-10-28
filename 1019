@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    final static Scanner ler = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int tempo = ler.nextInt();
+
+        int hora = tempo / 3600;
+        tempo -= hora * 3600;
+
+        int min = tempo / 60;
+        tempo -= min * 60;
+
+        int seg = tempo;
+
+        System.out.println(hora + " : " + min + " : " + seg);
+
+    }
+
+}

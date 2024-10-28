@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+    final static Scanner ler = new Scanner(System.in);
+
+    public static void main(String[] args) {
+       int tempo = ler.nextInt();
+       int velocidade = ler.nextInt();
+
+       double km = tempo * velocidade;
+
+       double litros = km/12;
+
+       System.out.printf("%.3f", litros);
+       
+    }
+       
+}

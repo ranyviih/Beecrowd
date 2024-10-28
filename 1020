@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class Main {
+    final static Scanner LER = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int idade = 0;
+        int anos = 0;
+        int meses = 0;
+
+        idade = lerIdade(idade);
+        anos = contaIdadeAnos(anos,idade);
+        
+        idade = idade % 365; 
+        meses = contaIdadeMeses(meses, idade);
+
+        idade = idade % 30;
+        
+        lerResposta(anos, meses, idade);
+    }
+
+    public static int lerIdade(int idade) {
+        idade = LER.nextInt();
+        return idade;
+    }
+
+    public static int contaIdadeAnos(int anos,int idade) {
+
+        anos = idade / 365;
+        return anos;
+    }
+    public static int contaIdadeMeses( int meses, int idade ) {
+
+        meses = idade / 30;
+        return meses;
+    }
+    
+    public static void lerResposta(int anos, int meses, int dias) {
+
+        System.out.println(anos + " ano(s)");
+        System.out.println(meses + " mes(es)");
+        System.out.println(dias + " dia(s)"); 
+    }
+}

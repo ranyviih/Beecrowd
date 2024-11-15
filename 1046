@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    final static Scanner ler = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int horaInicial = ler.nextInt();
+        int horaFinal = ler.nextInt();
+
+        int hora = 0;
+        int dia = horaInicial - horaFinal;
+        if (horaInicial == horaFinal) {
+            System.out.println("O JOGO DUROU 24 HORA(S)");
+        } else if (dia < 0) {
+            dia *= -1;
+            System.out.println("O JOGO DUROU " + dia + " HORA(S)");
+        } else if (dia > 0) {
+            hora = 24 - dia;
+            System.out.println("O JOGO DUROU " + hora + " HORA(S)");
+        }
+    }
+}

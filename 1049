@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main {
+    final static Scanner LER = new Scanner(System.in);
+    public static void main(String[] args) {
+        String tipo = LER.nextLine();
+        String carac01 = LER.nextLine();
+        String carac02 = LER.nextLine();
+
+
+        if (tipo.equals("vertebrado")) {
+            if (carac01.equals("ave")) {
+                if (carac02.equals("carnivoro")) {
+                    System.out.println("aguia");
+                }else if (carac02.equals("onivoro")) {
+                    System.out.println("pomba");
+                }
+            } else if (carac01.equals("mamifero")) {
+                if (carac02.equals("onivoro")) {
+                    System.out.println("homem");
+                } else if (carac02.equals("herbivoro")) {
+                    System.out.println("vaca");
+                }
+            }
+        } else if (tipo.equals("invertebrado")) {
+            if (carac01.equals("inseto")) {
+                if (carac02.equals("hematofago")) {
+                    System.out.println("pulga");
+                }else if (carac02.equals("herbivoro")) {
+                    System.out.println("lagarta");
+                }
+            } else if (carac01.equals("anelideo")) {
+                if (carac02.equals("hematofago")) {
+                    System.out.println("sanguessuga");
+                } else if (carac02.equals("onivoro")) {
+                    System.out.println("minhoca");
+                }
+            }
+        } 
+    }
+}

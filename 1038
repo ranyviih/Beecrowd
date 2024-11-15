@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class Main {
+
+    final static Scanner LER = new Scanner(System.in);
+
+    public static void main(String[] args){
+        int a = 0;
+        int b = 0; 
+
+        double total = 0;
+        
+        a = lerA(a);
+        b = lerB(b);
+
+        total = cardapiorLanche(a,b,total);
+        imprimirTotal(total);
+    }
+    public static int lerA(int a) {
+        a = LER.nextInt();
+        return a;
+    }
+    public static int lerB(int b) {
+        b = LER.nextInt();
+        return b;
+    }
+    public static double cardapiorLanche(int a, int b, double total) {
+        
+        switch (a) {
+			case 1:
+                total = b * 4.00; 
+                break;
+			case 2:
+                total = b * 4.50;
+                break;
+			case 3:
+                total = b * 5.00;
+                break;
+			case 4:
+                total = b * 2.00;
+                break;
+			// case 5: 
+            //     total = b * 1.50;
+            //     break;
+			default:
+            total = b * 1.50;
+	    }
+    return total;
+    
+    }
+    public static void imprimirTotal(double total) {
+        System.out.printf("Total: R$ %.2f\n", total);
+    }
+
+}

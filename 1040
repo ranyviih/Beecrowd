@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class Main {
+    final static Scanner teclado = new Scanner(System.in);
+
+    public static void main(String args[]) {
+        float n1 = 0;
+        float n2 = 0;
+        float n3 = 0;
+        float n4 = 0;
+        float media = 0;
+        float exame = 0;
+
+        n1 = lerN1(n1);
+        n2 = lerN2(n2);
+        n3 = lerN3(n3);
+        n4 = lerN4(n4);
+        //exame = lerExame(exame);
+        media = lerMedia(media, n1, n2, n3, n4, exame);
+
+    }
+
+    public static float lerN1(float n1) {
+        n1 = teclado.nextFloat();
+        return n1;
+    }
+
+    public static float lerN2(float n2) {
+        n2 = teclado.nextFloat();
+        return n2;
+    }
+
+    public static float lerN3(float n3) {
+        n3 = teclado.nextFloat();
+        return n3;
+    }
+
+    public static float lerN4(float n4) {
+        n4 = teclado.nextFloat();
+        return n4;
+    }
+
+    public static float lerExame(float exame) {
+        exame = teclado.nextFloat();
+        return exame;
+    }
+
+    public static float lerMedia(float media, float n1, float n2, float n3, float n4, float exame) {
+        media = ((2 * n1) + (3 * n2) + (4 * n3) + (1 * n4)) / (2 + 3 + 4 + 1);
+
+        if (media >= 7.0) {
+            System.out.printf("Media: %.1f\nAluno aprovado.\n", media);
+        } else if (media < 5.0) {
+            System.out.printf("Media: %.1f\nAluno reprovado.\n", media);
+        } else {
+            System.out.printf("Media: %.1f\nAluno em exame.\n", media);
+            exame = lerExame(exame);
+            System.out.printf("Nota do exame: %.1f\n", exame);
+            media = (media + exame) / 2;
+            if (media >= 5) {
+                System.out.println("Aluno aprovado.");
+                System.out.printf("Media final: %.1f\n",media);
+            } else{
+                System.out.println("Aluno reprovado.");
+                System.out.printf("Media final: %.1f\n", media);
+            }
+
+        }
+        return media;
+    }
+
+}

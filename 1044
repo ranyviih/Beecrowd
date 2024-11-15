@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class Main {
+    final static Scanner ler = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int a = ler.nextInt();
+        int b = ler.nextInt();
+        int c = ler.nextInt();
+
+        int maior = 0;
+        int menor = 0;
+        int medio = 0;
+
+        if (a <= b && a <= c || a == 0) {
+            menor = a;
+            if (b <= c) {
+                medio = b;
+                maior = c;
+            } else {
+                medio = c;
+                maior = b;
+            }
+        } else if (b <= a && b <= c || b == 0) {
+            menor = b;
+            if (a <= c) {
+                medio = a;
+                maior = c;
+            } else {
+                medio = c;
+                maior = a;
+            }
+        } else if (c <= b && c <= a || c == 0) {
+            menor = c;
+            if (b <= a) {
+                medio = b;
+                maior = a;
+            } else {
+                medio = a;
+                maior = b;
+            }
+        }
+
+        System.out.println(menor);
+        System.out.println(medio);
+        System.out.println(maior);
+        System.out.println();
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+
+    }
+}

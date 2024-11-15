@@ -1,0 +1,47 @@
+A = float(input())
+if A <= 400.00:
+    C = A * 1.15
+    B = C - A
+    D = 15
+if 400.01 <= A <= 800.00:
+    C = A * 1.12
+    B = C - A
+    D = 12
+if 800.01 <= A<= 1200.00:
+    C = A* 1.10
+    B = C - A
+    D = 10
+if 1200.01 <= A <= 2000.00:
+    C = A* 1.07
+    B = C - A
+    D = 7
+if  A > 2000.00:
+    C = A* 1.04
+    B = C - A
+    D = 4
+print('Novo salario: {:.2f}'.format(C))
+print('Reajuste ganho: {:.2f}'.format(B))
+print('Em percentual: {} %'.format(D))A = float(input())
+if A <= 400.00:
+    C = A * 1.15
+    B = C - A
+    D = 15
+if 400.01 <= A <= 800.00:
+    C = A * 1.12
+    B = C - A
+    D = 12
+if 800.01 <= A<= 1200.00:
+    C = A* 1.10
+    B = C - A
+    D = 10
+if 1200.01 <= A <= 2000.00:
+    C = A* 1.07
+    B = C - A
+    D = 7
+if  A > 2000.00:
+    C = A* 1.04
+    B = C - A
+    D = 4
+print('Novo salario: {:.2f}'.format(C))
+print('Reajuste ganho: {:.2f}'.format(B))
+print('Em percentual: {} %'.format(D))

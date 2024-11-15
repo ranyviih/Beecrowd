@@ -1,0 +1,94 @@
+import java.util.Scanner;
+
+public class Main {
+    final static Scanner LER = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        float a = 0;
+        float b = 0;
+        float c = 0;
+        String tiTriangulo = null;
+
+        a = lerA(a);
+        b = lerB(b);
+        c = lerC(c);
+
+        float maior = 0;
+        maior = maiorValor(a, b, c);
+        float menor = 0;
+        menor = menorValor(a,b,c);
+        float meio = 0;
+        meio = valorMedio(maior,menor,a,b,c);
+        
+        tiTriangulo = tiposTriangulo(maior, meio, menor, tiTriangulo);
+
+
+
+    }
+
+    public static float lerA(float a) {
+        a = LER.nextFloat();
+        return a;
+    }
+
+    public static float lerB(float b) {
+        b = LER.nextFloat();
+        return b;
+    }
+
+    public static float lerC(float c) {
+        c = LER.nextFloat();
+        return c;
+    }
+
+    public static float maiorValor(float a, float b, float c) {
+        float maiorAB = Math.max(a,b);
+        float maior = Math.max(maiorAB, c);
+        return maior;
+    }
+
+    public static float menorValor(float a, float b, float c) {
+        float menorAB = Math.min(a,b);
+        float menor = Math.min(menorAB, c);
+        return menor;
+    }
+
+    public static float valorMedio(float ma, float me,float a, float b, float c) {
+        float medio = (a+b+c) - (ma+me);
+        return medio;
+    }
+
+    public static String tiposTriangulo(float a, float b, float c, String tiTriangulo) {
+        if(a < b + c){
+            if (Math.pow(a, 2) == Math.pow(b, 2) + Math.pow(c, 2)){
+                tiTriangulo = "TRIANGULO RETANGULO";
+                imprimirResposta(tiTriangulo);
+            }
+            if (Math.pow(a, 2) > Math.pow(b, 2) + Math.pow(c, 2)){
+                tiTriangulo = "TRIANGULO OBTUSANGULO";
+                imprimirResposta(tiTriangulo);
+            }
+            if (Math.pow(a, 2) < Math.pow(b, 2) + Math.pow(c, 2)){
+                tiTriangulo = "TRIANGULO ACUTANGULO";
+                imprimirResposta(tiTriangulo);
+            }
+            if (a==b && b==c){
+                tiTriangulo = "TRIANGULO EQUILATERO";
+                imprimirResposta(tiTriangulo);
+            }
+            else if ((a == b && b != c) || (b == c && a != c) || (a == c && a != b)) {
+                tiTriangulo = "TRIANGULO ISOSCELES";
+                imprimirResposta(tiTriangulo);
+            }
+
+        }else{
+            tiTriangulo = "NAO FORMA TRIANGULO";
+            imprimirResposta(tiTriangulo);
+        } 
+
+        return tiTriangulo;
+    }
+    public static void imprimirResposta(String tiTriangulo) {
+        System.out.println(tiTriangulo);
+    }
+}
